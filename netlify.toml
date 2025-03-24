@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+[[plugins]]
+  package = "netlify-plugin-telegram-bot"
+
+[plugins.inputs]
+  token = "$TELEGRAM_TOKEN"
+  handler = "bot/bot.py"
+  requirements = "bot/requirements.txt"
+
+[dev]
+  framework = "#static"  # Indica que é um site estático
