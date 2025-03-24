@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alagamentos em São Paulo - Monitoramento em Tempo Real</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-water"></i> Monitoramento de Alagamentos - SP</h1>
+        <p>Informações em tempo real sobre pontos de alagamento na cidade</p>
+    </header>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat-card critical">
+                <h3>Críticos</h3>
+                <p id="critical-count">0</p>
+            </div>
+            <div class="stat-card moderate">
+                <h3>Moderados</h3>
+                <p id="moderate-count">0</p>
+            </div>
+            <div class="stat-card light">
+                <h3>Leves</h3>
+                <p id="light-count">0</p>
+            </div>
+            <div class="stat-card resolved">
+                <h3>Encerrados</h3>
+                <p id="resolved-count">0</p>
+            </div>
+        </div>
+
+        <div class="filter">
+            <input type="text" id="search" placeholder="Buscar por região ou rua...">
+            <select id="severity-filter">
+                <option value="all">Todos os níveis</option>
+                <option value="critical">Crítico</option>
+                <option value="moderate">Moderado</option>
+                <option value="light">Leve</option>
+                <option value="resolved">Encerrados</option>
+            </select>
+        </div>
+
+        <div class="alerts" id="alerts-container">
+            <!-- Os alertas serão inseridos aqui via JavaScript -->
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <h2>Receba alertas no Telegram</h2>
+        <p>Cadastre-se para receber notificações instantâneas quando houver alagamentos</p>
+        <a href="https://t.me/seu_bot_alagamentos_sp_bot" class="telegram-btn">
+            <i class="fab fa-telegram"></i> Assinar Alertas
+        </a>
+    </div>
+
+    <footer>
+        <p>Dados fornecidos por CGESP | Atualizado em: <span id="update-time"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
